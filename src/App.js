@@ -3,7 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return <div className="App" />;
+  return (
+    <div className="App">
+      <h1>Hello world from React!</h1>
+    </div>
+  );
 }
 
 export default App;
