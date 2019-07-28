@@ -17,11 +17,11 @@ class App extends Component {
         <p> I'm really working!</p>
         <button>Switch Name</button>
         {/* You can pass anything not just text between the opening and closing tag. */}
-        <Person name="Patrick" age="38">
+        <Person name={this.state.people[0].name} age={this.state.people[0].age}>
           My Hobbies: piano
         </Person>
-        <Person name="John" age="25" />
-        <Person name="Jane" age="29" />
+        <Person name={this.state.people[1].name} age={this.state.people[1].age} />
+        <Person name={this.state.people[2].name} age={this.state.people[2].age} />
       </div>
     );
   }
