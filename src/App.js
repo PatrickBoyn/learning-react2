@@ -4,7 +4,10 @@ import Person from './Person/Person';
 
 class App extends Component {
   state = {
-    people: [{ name: 'Patrick', age: 38 }],
+    people: [
+      { name: 'Patrick', age: 38 },
+      { name: 'John', age: 25 },
+      { name: 'Jane', age: 29 }],
   };
 
   render() {
