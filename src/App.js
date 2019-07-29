@@ -32,6 +32,7 @@ class App extends Component {
   };
 
   render() {
+    const style = {};
     return (
       <div className="App">
         <h1> Hello world from React! </h1>
