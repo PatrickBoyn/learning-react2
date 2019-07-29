@@ -46,7 +46,7 @@ class App extends Component {
         {/* Don't add parentheses  
              except with an arrow function.*/}
         {/* Can be inefficient */}
-        <button onClick={() => this.switchNameHandler("Larry")}>
+        <button style={style} onClick={() => this.switchNameHandler("Larry")}>
           Switch Name
         </button>
         {/* You can pass anything not just text between the opening and closing tag. */}
