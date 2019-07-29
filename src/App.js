@@ -26,8 +26,10 @@ class App extends Component {
       <div className="App">
         <h1> Hello world from React! </h1>
         <p> I'm really working!</p>
-        {/* Don't add parentheses */}
-        <button onClick={this.switchNameHandler.bind(this, "James")}>
+        {/* Don't add parentheses  
+             except with an arrow function.*/}
+        {/* Can be inefficient */}
+        <button onClick={() => this.switchNameHandler("Larry")}>
           Switch Name
         </button>
         {/* You can pass anything not just text between the opening and closing tag. */}
