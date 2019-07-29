@@ -48,6 +48,8 @@ class App extends Component {
         {/* Don't add parentheses  
              except with an arrow function.*/}
         {/* Can be inefficient */}
+        {/* Not my preferred way of styling. Remember inline styles have
+            a higher specificity. */}
         <button style={style} onClick={() => this.switchNameHandler("Larry")}>
           Switch Name
         </button>
