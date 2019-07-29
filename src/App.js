@@ -36,6 +36,7 @@ class App extends Component {
       backgroundColor: "white",
       font: "inherit",
       border: "1px solid blue",
+      borderRadius: "6px",
       padding: "8px"
     };
 
