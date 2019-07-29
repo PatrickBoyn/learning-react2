@@ -28,6 +28,7 @@ class App extends Component {
         { name: "Sarah", age: 25 },
         { name: "Jane", age: 29 }
       ]
+    });
   };
 
   render() {
@@ -46,6 +47,7 @@ class App extends Component {
           click={this.switchNameHandler.bind(this, "George")}
           name={this.state.people[0].name}
           age={this.state.people[0].age}
+          changed={this.nameChangedHandler}
         >
           My Hobbies: piano
         </Person>
