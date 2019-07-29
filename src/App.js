@@ -29,7 +29,11 @@ class App extends Component {
         {/* Don't add parentheses */}
         <button onClick={this.switchNameHandler}>Switch Name</button>
         {/* You can pass anything not just text between the opening and closing tag. */}
-        <Person name={this.state.people[0].name} age={this.state.people[0].age}>
+        <Person
+          click={this.switchNameHandler}
+          name={this.state.people[0].name}
+          age={this.state.people[0].age}
+        >
           My Hobbies: piano
         </Person>
         <Person
