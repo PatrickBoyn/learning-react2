@@ -53,24 +53,9 @@ class App extends Component {
     if (this.state.showPeople) {
       people = (
         <div>
-          <div>
-            <Person
-              click={this.switchNameHandler.bind(this, "George")}
-              name={this.state.people[0].name}
-              age={this.state.people[0].age}
-              changed={this.nameChangedHandler}
-            >
-              My Hobbies: piano
-            </Person>
-            <Person
-              name={this.state.people[1].name}
-              age={this.state.people[1].age}
-            />
-            <Person
-              name={this.state.people[2].name}
-              age={this.state.people[2].age}
-            />
-          </div>
+          {this.state.people.map(person => {
+            return <Person name={person.name} age={person.age} />;
+          })}
         </div>
       );
     }
@@ -80,7 +65,7 @@ class App extends Component {
         <h1> Hello world from React! </h1>
         <p> I'm really working!</p>
         <button style={style} onClick={this.togglePeopleHandler}>
-          Toggle People.
+          Toggle People
         </button>
         {people}
       </div>
