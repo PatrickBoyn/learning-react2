@@ -80,7 +80,7 @@ class App extends Component {
         <h1> Hello world from React! </h1>
         <p> I'm really working!</p>
         <button style={style} onClick={this.togglePeopleHandler}>
-          Switch Name
+          Toggle People.
         </button>
         {people}
       </div>
