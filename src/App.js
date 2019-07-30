@@ -22,7 +22,8 @@ class App extends Component {
   };
 
   deletePersonHandler = personIndex => {
-    const people = this.state.people;
+    // Makes a copy of the old array
+    const people = [...this.state.people];
 
     people.splice(personIndex, 1);
     // This is shorthand for people: people
