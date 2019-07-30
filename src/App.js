@@ -17,7 +17,8 @@ class App extends Component {
         { name: newName, age: 38 },
         { name: "Sarah", age: 25 },
         { name: "Jane", age: 29 }
-      ]
+      ],
+      showPeople: false
     });
   };
 
@@ -29,6 +30,12 @@ class App extends Component {
         { name: "Jane", age: 29 }
       ]
     });
+  };
+
+  togglePeopleHandler = () => {
+    const doesShow = this.state.showPeople;
+    // Swaps true for false.
+    this.setState({ showPeople: !doesShow });
   };
 
   render() {
@@ -50,26 +57,31 @@ class App extends Component {
         {/* Can be inefficient */}
         {/* Not my preferred way of styling. Remember inline styles have
             a higher specificity. */}
-        <button style={style} onClick={() => this.switchNameHandler("Larry")}>
+        <button style={style} onClick={this.togglePeopleHandler}>
           Switch Name
         </button>
-        {/* You can pass anything not just text between the opening and closing tag. */}
-        <Person
-          click={this.switchNameHandler.bind(this, "George")}
-          name={this.state.people[0].name}
-          age={this.state.people[0].age}
-          changed={this.nameChangedHandler}
-        >
-          My Hobbies: piano
-        </Person>
-        <Person
-          name={this.state.people[1].name}
-          age={this.state.people[1].age}
-        />
-        <Person
-          name={this.state.people[2].name}
-          age={this.state.people[2].age}
-        />
+        {/* Only simple statements can go in the braces. */}
+        {this.state.showPeople ? (
+          <div>
+            {/* You can pass anything not just text between the opening and closing tag. */}
+            <Person
+              click={this.switchNameHandler.bind(this, "George")}
+              name={this.state.people[0].name}
+              age={this.state.people[0].age}
+              changed={this.nameChangedHandler}
+            >
+              My Hobbies: piano
+            </Person>
+            <Person
+              name={this.state.people[1].name}
+              age={this.state.people[1].age}
+            />
+            <Person
+              name={this.state.people[2].name}
+              age={this.state.people[2].age}
+            />
+          </div>
+        ) : null}
       </div>
     );
   }
