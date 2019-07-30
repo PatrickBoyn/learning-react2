@@ -48,22 +48,12 @@ class App extends Component {
       cursor: "pointer"
     };
 
-    return (
-      <div className="App">
-        <h1> Hello world from React! </h1>
-        <p> I'm really working!</p>
-        {/* Don't add parentheses  
-             except with an arrow function.*/}
-        {/* Can be inefficient */}
-        {/* Not my preferred way of styling. Remember inline styles have
-            a higher specificity. */}
-        <button style={style} onClick={this.togglePeopleHandler}>
-          Switch Name
-        </button>
-        {/* Only simple statements can go in the braces. */}
-        {this.state.showPeople ? (
+    let people = null;
+
+    if (this.state.showPeople) {
+      people = (
+        <div>
           <div>
-            {/* You can pass anything not just text between the opening and closing tag. */}
             <Person
               click={this.switchNameHandler.bind(this, "George")}
               name={this.state.people[0].name}
@@ -81,7 +71,18 @@ class App extends Component {
               age={this.state.people[2].age}
             />
           </div>
-        ) : null}
+        </div>
+      );
+    }
+
+    return (
+      <div className="App">
+        <h1> Hello world from React! </h1>
+        <p> I'm really working!</p>
+        <button style={style} onClick={this.togglePeopleHandler}>
+          Switch Name
+        </button>
+        {people}
       </div>
     );
   }
