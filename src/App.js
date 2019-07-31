@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.module.css";
+import styles from "./App.module.css";
 import Person from "./Person/Person";
 
 class App extends Component {
@@ -51,13 +51,10 @@ class App extends Component {
       backgroundColor: "green",
       color: "white",
       font: "inherit",
+      border: "none",
       borderRadius: "6px",
       padding: "8px",
-      cursor: "pointer",
-      ":hover": {
-        backgroundColor: "limegreen",
-        color: "black"
-      }
+      cursor: "pointer"
     };
 
     let people = null;
@@ -94,7 +91,7 @@ class App extends Component {
     }
 
     return (
-      <div className="App.">
+      <div className={styles.App}>
         <h1> Hello world from React! </h1>
         <p className={classes.join(" ")}> I'm really working!</p>
         <button style={style} onClick={this.togglePeopleHandler}>
