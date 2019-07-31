@@ -82,11 +82,11 @@ class App extends Component {
     let classes = [];
 
     if (this.state.people.length <= 2) {
-      classes.push("red");
+      classes.push(styles.red);
       console.log(classes);
     }
     if (this.state.people < 1) {
-      classes.push("bold");
+      classes.push(styles.bold);
       console.log(classes);
     }
 
