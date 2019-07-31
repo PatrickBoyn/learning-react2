@@ -80,10 +80,6 @@ class App extends Component {
       );
 
       style.backgroundColor = "red";
-      style[":hover"] = {
-        backgroundColor: "salmon",
-        color: "black"
-      };
     }
 
     let classes = [];
@@ -98,7 +94,7 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className="App.">
         <h1> Hello world from React! </h1>
         <p className={classes.join(" ")}> I'm really working!</p>
         <button style={style} onClick={this.togglePeopleHandler}>
