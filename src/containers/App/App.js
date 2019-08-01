@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./App.module.css";
-import People from "../People/People";
+import People from "../../components/People/People";
+import Header from "../../components/Header/Header";
 
 class App extends Component {
   state = {
@@ -48,37 +49,24 @@ class App extends Component {
 
   render() {
     let people = null;
-    let btnClass = "";
 
     if (this.state.showPeople) {
       people = (
-        <div>
-          <People
-            people={this.state.people}
-            clicked={this.deletePersonHandler}
-            changed={this.nameChangedHandler}
-          />
-        </div>
+        <People
+          people={this.state.people}
+          clicked={this.deletePersonHandler}
+          changed={this.nameChangedHandler}
+        />
       );
-      btnClass = styles.Red;
-    }
-
-    let classes = [];
-
-    if (this.state.people.length <= 2) {
-      classes.push(styles.red);
-    }
-    if (this.state.people.length <= 1) {
-      classes.push(styles.bold);
     }
 
     return (
       <div className={styles.App}>
-        <h1> Hello world from React! </h1>
-        <p className={classes.join(" ")}> I'm really working!</p>
-        <button className={btnClass} onClick={this.togglePeopleHandler}>
-          Toggle People
-        </button>
+        <Header
+          showPeople={this.state.showPeople}
+          people={this.state.people}
+          clicked={this.togglePeopleHandler}
+        />
         {people}
       </div>
     );
