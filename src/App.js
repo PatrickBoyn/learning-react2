@@ -73,11 +73,9 @@ class App extends Component {
 
     if (this.state.people.length <= 2) {
       classes.push(styles.red);
-      console.log(classes);
     }
-    if (this.state.people < 1) {
+    if (this.state.people.length <= 1) {
       classes.push(styles.bold);
-      console.log(classes);
     }
 
     return (
