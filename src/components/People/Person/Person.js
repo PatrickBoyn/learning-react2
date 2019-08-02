@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./person.module.css";
 
 const person = props => {
-  // The + 8 is so 0 is never a number. Someone who is 0 can't talk.
+  console.log("[Person.js] render");
   return (
     <div className={styles.Person}>
       <p onClick={props.click}>

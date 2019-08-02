@@ -3,6 +3,8 @@ import Person from "./Person/Person";
 
 const people = props =>
   props.people.map((person, index) => {
+    console.log("[Person.js] render");
+
     return (
       <Person
         click={() => props.clicked(index)}
