@@ -63,6 +63,7 @@ class App extends Component {
     return (
       <div className={styles.App}>
         <Header
+          title={this.props.appTitle}
           showPeople={this.state.showPeople}
           people={this.state.people}
           clicked={this.togglePeopleHandler}

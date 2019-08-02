@@ -17,7 +17,7 @@ const header = props => {
 
   return (
     <div className={styles.Header}>
-      <h1> Hello world from React! </h1>
+      <h1> {props.title}</h1>
       <p className={classes.join(" ")}> I'm really working!</p>
       <button className={btnClass} onClick={props.clicked}>
         Toggle People
