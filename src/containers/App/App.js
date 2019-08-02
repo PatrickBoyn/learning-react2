@@ -4,13 +4,17 @@ import People from "../../components/People/People";
 import Header from "../../components/Header/Header";
 
 class App extends Component {
-  state = {
-    people: [
-      { id: 1, name: "Patrick", age: 38 },
-      { id: 2, name: "John", age: 25 },
-      { id: 3, name: "Jane", age: 29 }
-    ]
-  };
+  constructor(props) {
+    super(props);
+    console.log("[App.js] constructor");
+    this.state = {
+      people: [
+        { id: 1, name: "Patrick", age: 38 },
+        { id: 2, name: "John", age: 25 },
+        { id: 3, name: "Jane", age: 29 }
+      ]
+    };
+  }
 
   nameChangedHandler = (event, id) => {
     const personIndex = this.state.people.findIndex(p => {
