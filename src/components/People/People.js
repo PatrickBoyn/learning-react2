@@ -1,10 +1,9 @@
 import React from "react";
 import Person from "./Person/Person";
 
-const people = props =>
+const people = props => {
+  console.log("[Person.js] render");
   props.people.map((person, index) => {
-    console.log("[Person.js] render");
-
     return (
       <Person
         click={() => props.clicked(index)}
@@ -15,5 +14,6 @@ const people = props =>
       />
     );
   });
+};
 
 export default people;
