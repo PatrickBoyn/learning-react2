@@ -6,7 +6,6 @@ import Header from "../../components/Header/Header";
 class App extends Component {
   constructor(props) {
     super(props);
-    console.log("[App.js] constructor");
     this.state = {
       people: [
         { id: 1, name: "Patrick", age: 38 },
@@ -14,15 +13,6 @@ class App extends Component {
         { id: 3, name: "Jane", age: 29 }
       ]
     };
-  }
-
-  static getDerivedStateFromProps(props, state) {
-    console.log("[App.js] getDerivedStateFromProps", props);
-    return state;
-  }
-
-  componentDidMount() {
-    console.log("[App.js] componentDidMount running");
   }
 
   nameChangedHandler = (event, id) => {
@@ -61,7 +51,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("[App.js] render");
     let people = null;
 
     if (this.state.showPeople) {
