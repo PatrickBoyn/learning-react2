@@ -5,6 +5,10 @@ import styles from "./Header.module.css";
 const Header = props => {
   useEffect(() => {
     console.log("Header.js useEffect");
+
+    setTimeout(() => {
+      alert("Saved data to cloud!");
+    }, 1000);
   });
 
   let classes = [];
