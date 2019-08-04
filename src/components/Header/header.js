@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Header.module.css";
 
-const header = props => {
+// The name should be capitalized even though it's a function.
+const Header = props => {
+  useEffect(() => {
+    console.log("Header.js useEffect");
+  });
+
   let classes = [];
   let btnClass = "";
 
@@ -26,4 +31,4 @@ const header = props => {
   );
 };
 
-export default header;
+export default Header;
